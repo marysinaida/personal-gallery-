@@ -6,7 +6,7 @@ import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to the My Gallery App')
+    return render(request,'welcome.html')
 
 def photo_category(request):
     date = dt.date.today()
