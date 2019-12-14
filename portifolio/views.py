@@ -7,7 +7,7 @@ import datetime as dt
 # Create your views here.
 def welcome(request):
     return render(request,'welcome.html')
-
+#function that display diffrent photo categories in cards.
 def photo_category(request):
     date = dt.date.today()
     html = f'''
