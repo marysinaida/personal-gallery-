@@ -10,22 +10,19 @@ def welcome(request):
 #function that display diffrent photo categories in cards.
 def photo_category(request):
     date = dt.date.today()
-    html = f'''
-        <html>
-            <body>
-                <h1> {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
+    return render(request, 'all-Folio/category.html', {"date": date,})
 
-def convert_dates(dates):
+def travel(request):
+    date = dt.date.today()
+    return render(request, 'all-Folio/travel.html', {"date": date,})
 
-    # Function that gets the weekday number for the date.
-    day_number = dt.date.weekday(dates)
+def party(request):
+    date = dt.date.today()
+    return render(request, 'all-Folio/party.html', {"date": date,})
 
-    days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',"Sunday"]
+def activity(request):
+    date = dt.date.today()
+    return render(request, 'all-Folio/activity.html', {"date": date,})
+    
+    
 
-    # Returning the actual day of the week
-    day = days[day_number]
-    return day

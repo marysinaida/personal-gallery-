@@ -1,0 +1,41 @@
+h3
+{
+  color: green;
+}
+.card{
+  padding-top: 30px;
+  box-shadow: mediumvioletred;
+  height: 250px;
+  width: 250px;
+  
+}
+footer
+{
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+.container
+{
+  background-color: beige;
+}
+
+.copyright,  .impressum
+{
+  text-align: center;
+}
+
+.logo
+{
+  height: 8vh;
+}
+
+@media (max-width: 768px) 
+{
+  
+  
+  .sozial
+  {
+    margin-bottom: 1vh;
+  }
+}
