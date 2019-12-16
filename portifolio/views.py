@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
 import datetime as dt
+from .models import *
 
 
 
@@ -10,24 +11,20 @@ def welcome(request):
 #function that display diffrent photo categories in cards.
 def photo_category(request):
     date = dt.date.today()
-    return render(request, 'all-Folio/category.html', {"date": date,})
+    portifolio = Image.objects.all
+    return render(request, 'all-Folio/category.html', {"date": date, "portifolio":portifolio})
 
-def travel(request):
-    date = dt.date.today()
-    return render(request, 'all-Folio/travel.html', {"date": date,})
+def search_results(request):
+        if 'image' in request.GET and request.GET["image"]:
+                search_term = request.GET.get("image")
+                searched_images = Image.search_by_category(search_term)
+                message = f"{search_term}"
 
-def party(request):
-    date = dt.date.today()
-    return render(request, 'all-Folio/party.html', {"date": date,})
+                return render(request, 'all-Folio/search.html',{"message":message,"images":searched_images})
 
-def activity(request):
-    date = dt.date.today()
-    return render(request, 'all-Folio/activity.html', {"date": date,})
-
-def school(request):
-    date = dt.date.today()
-    return render(request, 'all-Folio/school.html', {"date": date,})
-
+        else:
+                message = "You havent searched for any term"
+                return render(request,'all-Folio/search.html',{"message":message})
 
     
     

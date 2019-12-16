@@ -2,11 +2,11 @@ h3
 {
   color: green;
 }
-.card{
+.port{
   padding-top: 30px;
   box-shadow: mediumvioletred;
-  height: 250px;
-  width: 250px;
+  height:500px;
+  width: 500px;
   
 }
 footer

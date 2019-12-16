@@ -1,12 +1,12 @@
 from django.conf.urls import url
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns=[
     url(r'^$',views.photo_category,name='photoCategory'),
-    url('^travel/$',views.travel,name='travel'),
-    url('^party/$',views.travel,name='party'),
-    url('^activity/$',views.travel,name='activity'),
-    url('^school/$',views.travel,name='school')
-    url(r'^search/', views.search_results, name='search_results')
-
+    url(r'^search/', views.search_results, name='search_results'),
+    
 ]
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
