@@ -2,7 +2,10 @@
 
 {% block content %}
 {{block.super}}
+<div class="container">
+<div class="row">
 {% for portifolio_item in portifolio %}
+<div class="col-md-6">
 <div class="add-data">
     <a href="" data-toggle="modal" data-target="#{{portifolio_item.id}}">
         <img src="{{portifolio_item.category_image.url}}" class="img-responsive port" alt="Image">
@@ -14,7 +17,7 @@
         <div class="modal-content">
             <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h3 class="modal-title uppercase capital bold " id="myModalLabel">portifolio_item.title</h3>
+                  <h3 class="modal-title uppercase capital bold " id="myModalLabel">{{portifolio_item.title}}</h3>
             </div>
             <div class="modal-body">
                 <div class="cont">
@@ -25,13 +28,17 @@
                 <h6>{{portifolio_item.pub_date}}</h6>
             </div>
             <div class="modal-footer">
+                <input type="button" id="" value="{{portifolio_item.category_image.url }}">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                
             </div>
         </div>
     </div>
 </div>
-  {% endfor%}
+</div>
+{% endfor%}
+</div>
+</div>
 
 
 {% endblock %}

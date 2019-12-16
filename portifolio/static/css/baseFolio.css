@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+
 h3
 {
   color: green;
+  font-family: 'Fjalla One', sans-serif;
+}
+h2{
+  color: white;
+  font-size: 60px;
+  font-family: 'Fjalla One', sans-serif;;
+}
+h1{
+  font-family: 'Fjalla One', sans-serif;
 }
 .port{
   padding-top: 30px;
@@ -8,6 +19,10 @@ h3
   height:500px;
   width: 500px;
   
+}
+.about{
+  background-image: url("https://t3.ftcdn.net/jpg/01/19/14/10/240_F_119141034_KPywwnZOeUyT2iVsh93ViXl17QxLKpuV.jpg");
+  height:80vh;
 }
 footer
 {

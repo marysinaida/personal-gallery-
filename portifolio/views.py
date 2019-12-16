@@ -14,6 +14,11 @@ def photo_category(request):
     portifolio = Image.objects.all
     return render(request, 'all-Folio/category.html', {"date": date, "portifolio":portifolio})
 
+def about(request):
+    date = dt.date.today()
+    return render(request, 'all-Folio/about.html', {"date": date })
+
+
 def search_results(request):
         if 'image' in request.GET and request.GET["image"]:
                 search_term = request.GET.get("image")
