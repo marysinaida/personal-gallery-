@@ -23,6 +23,12 @@ def party(request):
 def activity(request):
     date = dt.date.today()
     return render(request, 'all-Folio/activity.html', {"date": date,})
+
+def school(request):
+    date = dt.date.today()
+    return render(request, 'all-Folio/school.html', {"date": date,})
+
+
     
     
 

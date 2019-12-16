@@ -7,4 +7,6 @@ urlpatterns=[
     url('^party/$',views.travel,name='party'),
     url('^activity/$',views.travel,name='activity'),
     url('^school/$',views.travel,name='school')
+    url(r'^search/', views.search_results, name='search_results')
+
 ]
